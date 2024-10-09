@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <print>
 using std::cout;
 using std::string;
 
@@ -11,20 +11,20 @@ public:
   int age;
   string daro;
 
-  // class constructors
+  // class constructors / constructor function
   Student(string names, int ages, string classs) {
+
     name = names;
     age = ages;
     daro = classs;
   }
   void StudentDetails() {
-    cout << "Name: " << name << " Age: " << age << " Class: " << daro
-         << std::endl;
+    std::println("Name:{} Age: {} Class: {}", name, age, daro);
   }
 };
 
 int main() {
   Student sam = Student("Wanjare Samuel", 14, "8 Niger");
-  cout << "Hello " << sam.name << std::endl;
+  std::println("Hello {}", sam.name);
   sam.StudentDetails();
 }

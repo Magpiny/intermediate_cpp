@@ -1,7 +1,6 @@
 # Define the compiler and the C++ standard version
 CXX = clang++
 CXXSTD = -std=c++23
-CXXFLAGS = -pthread
 
 # Define the output directory and the executable name
 BIN_DIR = bin
@@ -9,7 +8,7 @@ EXECUTABLE = APP
 TARGET = $(BIN_DIR)/app
 
 # Define the source file
-SOURCE = ./parallelism/intro.cpp
+SOURCE = lambda.cpp
 
 # Create the bin directory if it doesn't exist
 .PHONY: create_bin_dir

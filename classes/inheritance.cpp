@@ -4,7 +4,8 @@
 using std::println;
 using std::string;
 
-class Animal {
+class Animal
+{
   virtual void animal_details() = 0;
 
 protected:
@@ -14,7 +15,9 @@ protected:
 
 public:
   Animal(int Age, string colour, string Name)
-      : age(Age), color(colour), name(Name) {};
+    : age(Age)
+    , color(colour)
+    , name(Name) {};
 
   void setSize(int Age) { age = Age; }
   int getAge() { return age; }
@@ -22,7 +25,8 @@ public:
   virtual ~Animal() {};
 };
 
-class CAT : public Animal {
+class CAT : public Animal
+{
   int legs;
 
 protected:
@@ -30,9 +34,12 @@ protected:
 
 public:
   CAT(int age, string color, string name, int Legs, string Breed)
-      : Animal(age, color, name), legs(Legs), breed(Breed) {};
+    : Animal(age, color, name)
+    , legs(Legs)
+    , breed(Breed) {};
 
-  void animal_details() override {
+  void animal_details() override
+  {
     println("Animal Name: {}", name);
     println("Animal Age: {}yrs old", age);
     println("Animal Colour: {}", color);
@@ -42,7 +49,9 @@ public:
   }
 };
 
-int main() {
+int
+main()
+{
   CAT mycat(3, "white", "Cute Bunny", 4, "Brazillian");
   CAT kitten = CAT(1, "grey", "Cute Sussy", 4, "Mexican");
 

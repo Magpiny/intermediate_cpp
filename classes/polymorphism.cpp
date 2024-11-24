@@ -3,7 +3,8 @@
 
 using namespace std;
 
-class Fish {
+class Fish
+{
 protected:
   string name;
 
@@ -13,7 +14,10 @@ public:
   string type;
   int weight;
 
-  Fish(string n, string t, int w) : name(n), type(t), weight(w) {};
+  Fish(string n, string t, int w)
+    : name(n)
+    , type(t)
+    , weight(w) {};
 
   void set_name(string name) { name = name; }
 
@@ -22,14 +26,17 @@ public:
   virtual ~Fish() {};
 };
 
-class Tilapia : public Fish {
+class Tilapia : public Fish
+{
 public:
   string size;
 
   Tilapia(string nm, string typ, int weight, string size)
-      : Fish(nm, typ, weight), size(size) {};
+    : Fish(nm, typ, weight)
+    , size(size) {};
 
-  void fish_details() override {
+  void fish_details() override
+  {
     // polymorphism in action:
     println("Fish Name: {}", name);
     println("Fish Type: {}", type);
@@ -38,11 +45,15 @@ public:
   }
 };
 
-void getFishName(Tilapia &tilap) {
+void
+getFishName(Tilapia& tilap)
+{
   println("My Fish Name: {}", tilap.get_name());
 }
 
-int main() {
+int
+main()
+{
   Tilapia tilap = Tilapia("Ngege", "lake", 4, "medium");
   getFishName(tilap);
   println("Fish Two {}", tilap.get_name());

@@ -4,7 +4,9 @@
 #include <thread>
 #include <vector>
 
-void heavy_computation(std::vector<long long> &result, int start, int end) {
+void
+heavy_computation(std::vector<long long>& result, int start, int end)
+{
   long long sum = 0;
   for (int i = start; i < end; ++i) {
     // Simulate some heavy computation
@@ -15,7 +17,9 @@ void heavy_computation(std::vector<long long> &result, int start, int end) {
   result[start / (end - start)] = sum;
 }
 
-int main() {
+int
+main()
+{
   const int SIZE = 1000;
   std::vector<long long> result(4, 0);
 
@@ -24,7 +28,7 @@ int main() {
   heavy_computation(result, 0, SIZE);
   auto end_single = std::chrono::high_resolution_clock::now();
   auto duration_single = std::chrono::duration_cast<std::chrono::milliseconds>(
-      end_single - start_single);
+    end_single - start_single);
 
   // Multi-threaded version
   auto start_multi = std::chrono::high_resolution_clock::now();
@@ -40,7 +44,7 @@ int main() {
 
   auto end_multi = std::chrono::high_resolution_clock::now();
   auto duration_multi = std::chrono::duration_cast<std::chrono::milliseconds>(
-      end_multi - start_multi);
+    end_multi - start_multi);
 
   std::cout << "Single-threaded time: " << duration_single.count() << " ms\n";
   std::cout << "Multi-threaded time: " << duration_multi.count() << " ms\n";

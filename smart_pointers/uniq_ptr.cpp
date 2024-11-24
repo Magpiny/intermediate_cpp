@@ -5,9 +5,7 @@
 class Dog {
  public:
   Dog() { std::println("Constructor Invoked"); }
-  void do_sth(){
-      std::println("Do something great");
-  };
+  void do_sth() { std::println("Do something great"); };
   ~Dog() { std::println("Destructor Invoked"); }
 };
 

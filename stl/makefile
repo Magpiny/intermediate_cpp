@@ -8,7 +8,7 @@ EXECUTABLE = APP
 TARGET = $(BIN_DIR)/app
 
 # Define the source file
-SOURCE = lambda.cpp
+SOURCE = vector.cpp
 
 # Create the bin directory if it doesn't exist
 .PHONY: create_bin_dir

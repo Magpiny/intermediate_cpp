@@ -1,12 +1,15 @@
 #include <iostream>
 
-class Rectangle {
+class Rectangle
+{
 public:
   int height;
   int width;
 };
 
-int main() {
+int
+main()
+{
   Rectangle rec;
   int height = rec.height;
   int width = rec.width;

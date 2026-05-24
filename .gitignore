@@ -33,4 +33,6 @@
 
 # binaries folder
 ./*/bin
+./*/build
+./build
 

@@ -1,0 +1,9 @@
+# Build artifacts
+build/
+
+# Fetched dependencies — teammates run cmake to get these
+libs/
+
+# CMake cache
+CMakeCache.txt
+CMakeFiles/

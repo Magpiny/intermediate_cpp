@@ -35,4 +35,7 @@
 ./*/bin
 ./*/build
 ./build
-
+./.git/*
+build
+.git
+.git/*
